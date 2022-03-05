@@ -41,10 +41,10 @@ const Profile = () => {
                         placeholder = "Phone Number"
                     />
                 </View>
-
+                
                 <Button 
-                    style = {styles.button}
-                    text = "Save"
+                        style = {styles.button}
+                        text = "Save"
                 />
             </ScrollView>
         </View>
@@ -74,13 +74,15 @@ const styles = StyleSheet.create({
         width: '96%',
         margin: '2%',
         alignItems:"center",
+        // backgroundColor: '#E900FF',
     },
     containerInput: {
         width: '90%',
         marginLeft: '5%',
         marginRight: '5%',
-        height: '70%',
-        marginBottom: '30%'
+        marginTop: '2%',
+        marginBottom: '2%',
+        // backgroundColor: '#FFC600',
     },
     textInput: {
         width: '100%',
@@ -92,12 +94,8 @@ const styles = StyleSheet.create({
         paddingVertical: 20,
         justifyContent: "center",
         alignItems: "center",
-        width: '92%',
-        marginHorizontal: '4%',
         borderRadius: 10,
         elevation: 3,
-        position: 'absolute',
-        bottom: 0,
     },
 })
 
