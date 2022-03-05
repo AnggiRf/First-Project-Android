@@ -1,11 +1,11 @@
 import React from "react";
 import { Image, SafeAreaView, ScrollView, StyleSheet, Text, View } from "react-native";
-import { Header, Input, Picker} from "@components";
+import { Header, Input, Picker, Button} from "@components";
 import { UserProfile } from "@assets";
 
 const Profile = () => {
     return (
-        <SafeAreaView>
+        <View style = {{flex : 1, flexDirection: 'row', flexWrap: 'wrap'}}>
             <ScrollView>
                 <Header 
                     styleHeader = {styles.header}
@@ -41,8 +41,13 @@ const Profile = () => {
                         placeholder = "Phone Number"
                     />
                 </View>
+
+                <Button 
+                    style = {styles.button}
+                    text = "Save"
+                />
             </ScrollView>
-        </SafeAreaView>
+        </View>
     )
 }
 
@@ -50,8 +55,8 @@ const styles = StyleSheet.create({
     //style
     header: {
         backgroundColor: '#FFF',
-        paddingVertical: 20,
-        paddingHorizontal: 20,
+        width: '96%',
+        margin: '2%',
         alignItems: 'flex-start',
         // backgroundColor: "#2D31FA",
     },
@@ -66,16 +71,33 @@ const styles = StyleSheet.create({
     },
     containerImage: {
         flexDirection: "row", 
-        paddingHorizontal: 20, 
-        paddingVertical: 20,
+        width: '96%',
+        margin: '2%',
         alignItems:"center",
     },
     containerInput: {
-        paddingHorizontal: 20, 
+        width: '90%',
+        marginLeft: '5%',
+        marginRight: '5%',
+        height: '70%',
+        marginBottom: '30%'
     },
     textInput: {
-        marginTop: 20,
+        width: '100%',
+        marginTop: '4%',
         borderBottomWidth: 1,
+    },
+    button: {
+        backgroundColor: "#F8AF86",
+        paddingVertical: 20,
+        justifyContent: "center",
+        alignItems: "center",
+        width: '92%',
+        marginHorizontal: '4%',
+        borderRadius: 10,
+        elevation: 3,
+        position: 'absolute',
+        bottom: 0,
     },
 })
 
